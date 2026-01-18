@@ -280,3 +280,53 @@ nav button{
 .about-content .about-detail .detail-box p{
     text-transform: uppercase;
 }
+/* why choose me section style */
+.choosing-tw{
+    padding: 120px 0;
+    background-color: #230E3D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tw-container{
+    max-width: 1200px;
+    text-align: center;
+}
+.tw-container h3{
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 40px;
+}
+.tw-container .cards-box{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(auto, max-content));
+}
+.tw-container .cards-box .card{
+    background-color: #2a0f4d;
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 16px;
+}
+.tw-container .cards-box .card h5{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.long-height{
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.wide{
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.single{
+    grid-column: span 1;
+    grid-row: span 1;
+}
