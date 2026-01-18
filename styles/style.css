@@ -20,6 +20,38 @@ html{
         #9100F8 100%
     );
 }
+.overlay-gradient{
+    background: linear-gradient(
+        20deg,
+        #F7E93F 15%,
+        #FB09B4 51%,
+        #9100F8 100%
+    );
+}
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    25%{
+        background-position: 50% 25%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    75%{
+        background-position: 50% 75%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.btn-hover{
+    transition: background-size 0.2s ease;
+    background-size: 100% 100%;
+}
+.btn-hover:hover{
+    background-size: 200% 200%;
+}
 .text-gradient{
     background: linear-gradient(
         20deg,
@@ -30,18 +62,25 @@ html{
     -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+.text{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    color: white;
+}
 :root{
-    --background-color-one: #412567;
+    --background-color-one: #1A0B2E;
 }
 /* main style */
 
-/* navbar styling */
+    /* navbar styling */
 nav{
     padding: 1.5vh 0vw;
     background-color: var(--background-color-one);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border-bottom: 1px solid #412567;
 }
 nav .logo{
     font-size: 2rem;
@@ -66,4 +105,123 @@ nav button{
     color: white;
     font-size: 1rem;
     font-weight: 600;
+}
+
+/* hero section styles */
+.hero{
+    position: relative;
+}
+.hero img{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.hero-content .mic-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1;
+    margin-bottom: 40px;
+}
+.hero-content .mic-img::before{
+    content: "NEW";
+    position: absolute;
+    right: 50px;
+    top: 0;
+    padding: 8px 16px;
+    background-color: #00FF88;
+    box-shadow: 0 3px 27px 0 #00ff8897;
+    border-radius: 50px;
+    color: #1A0B2E;
+    font-size: 1.1rem;
+    font-weight: 600;
+    z-index: 1;
+}
+#hero-overlay-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: 8px solid transparent;
+    background-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient 5s ease-in-out infinite;
+}
+#hero-overlay-image::after {
+    content: "";
+    position: absolute;
+    inset: 0%;
+    background: inherit;
+    animation: spin 8s linear infinite;
+    border-radius: 50%;
+    border: 8px solid #412567;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+#hero-overlay-image img{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    z-index: 1;
+}
+.hero-content .hero-des{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-des h1{
+    color: white;
+    font-size: 3.75rem;
+    font-weight:800;
+}
+.hero-des p{
+    margin-top: 8px;
+}
+.hero-des .hero-btn{
+    display: flex;
+    margin-top: 24px;
+    gap: 8px;
+}
+.hero-des .hero-btn button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.hero-des .hero-btn button:nth-child(2){
+    background-color: transparent;
+    color: #00FF88;
+    border: 2px solid #00FF88;
+    transition: all 0.2s ease;
+}
+.hero-des .hero-btn button:nth-child(2):hover{
+    background-color: rgba(0, 255, 136, 0.1);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
