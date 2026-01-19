@@ -542,12 +542,17 @@ nav button{
     scale: 1.1;
 }
 /* footer section styling */
-footer{
+footer {
     position: relative;
-}
-footer img{
+    background-image: url('../assets/footer-bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    vertical-align: middle;
 }
 footer .footer-content{
     display: flex;
@@ -555,10 +560,7 @@ footer .footer-content{
     align-items: center;
     flex-direction: column;
     gap: 32px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
 }
 .footer-content .logo{
     font-size: 5rem;
@@ -636,5 +638,94 @@ footer .footer-content{
     .hero-content .mic-img {
         max-width: 180px;
     }
-
+    .text{
+        font-size: 0.85rem;
+        line-height: 18px;
+    }
+    .about-content .about-detail{
+        display: grid;
+        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+    .about-detail .detail-box p{
+        font-size: 0.81rem;
+    }
+    .about-content hr{
+        width: 90%;
+        margin: 40px 0;
+    }
+    .about-content h2{
+        font-size: 2rem;
+    }
+    .about-content > p{
+        width: 90%;
+    }
+    .about, .feature, .choosing-tw{
+        padding: 40px 0;
+    }
+    .tw-container h3{
+        font-size: 1.8rem;
+    }
+    .tw-container{
+        padding: 0 20px;
+    }
+    .long-height, .wide, .single{
+        grid-column:span 1;
+        grid-row: span 1;
+    }
+    .tw-container .cards-box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .tw-container .cards-box .card{
+        padding: 24px;
+    }
+    .feature-container{
+        padding: 0 20px;
+    }
+    .feature-container h2{
+        font-size: 2rem;
+    }
+    .feature-container .video-box{
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .host{
+        padding: 20px 20px;
+    }
+    .host h3{
+        font-size: 2rem;
+    }
+    .host-container{
+        flex-direction: column;
+        padding: 24px;
+    }
+    .host-container .host-img{
+        width: 50%;
+    }
+    .host-info .links ul{
+        justify-content: center;
+        align-items: center;
+    }
+    .host-container .host-info{
+        text-align: center;
+    }
+    .host-info h5{
+        font-size: 1.6rem;
+    }
+    footer{
+        padding: 60px 20px;
+        min-height: auto; 
+        background-size: 100% 100%;
+    }
+    footer .footer-content{
+        gap: 24px;
+        width: 80%;
+    }
+    .footer-content .logo{
+        font-size: 3rem;
+    }
+    .footer-content ul{
+        gap: 16px;
+    }
 }
