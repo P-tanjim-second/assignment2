@@ -59,7 +59,8 @@
         <section class="about">
             <div class="about-content">
                 <h2 class="bottom">About The Podcast</h2>
-                <p class="text bottom">TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.
+                <p class="text bottom">TechWave is your go-to podcast for staying ahead in the fast-paced world of
+                    technology.
                     We break down complex topics into digestible insights, explore productivity strategies that actually
                     work,
                     and share stories of personal growth from industry leaders. <br><br>
@@ -97,14 +98,16 @@
                     <div class="card long-height bottom">
                         <div><img class="rotate" src="./assets/headphone.png" alt="a headphone"></div>
                         <h5 class="opacity">Premium Audio Quality</h5>
-                        <p class="text opacity">Experience crystal-clear sound with professional-grade recording equipment and
+                        <p class="text opacity">Experience crystal-clear sound with professional-grade recording
+                            equipment and
                             expert audio engineering. Every episode is mastered for optimal listening across all devices
                             and platforms.</p>
                     </div>
                     <div class="card wide right">
                         <div><img class="rotate" src="./assets/device.png" alt="mobile image"></div>
                         <h5 class="opacity">Mobile Friendly</h5>
-                        <p class="text opacity">Listen on the go with seamless mobile experience and offline downloads.</p>
+                        <p class="text opacity">Listen on the go with seamless mobile experience and offline downloads.
+                        </p>
                     </div>
                     <div class="card wide right">
                         <div><img class="rotate" src="./assets/location.png" alt=""></div>
@@ -121,7 +124,8 @@
                     <div class="card single bottom">
                         <div><img class="rotate" src="./assets/resource.png" alt=""></div>
                         <h5 class="opacity">Rich Resources</h5>
-                        <p class="text opacity">Access show notes, transcripts, and additional learning materials for every
+                        <p class="text opacity">Access show notes, transcripts, and additional learning materials for
+                            every
                             episode.</p>
                     </div>
                 </div>
@@ -129,18 +133,49 @@
         </section>
 
         <section class="feature">
+            <!-- the box where we show the video -->
+             <!-- change videos -->
+            <input type="radio" name="video" id="video-1" hidden>
+            <input type="radio" name="video" id="video-2" hidden>
+            <input type="radio" name="video" id="video-3" hidden>
+            <input type="radio" name="video" id="video-close" hidden checked>
+
+
+            <div class="open-video-box">
+                <div class="close-vdo">
+                    <label for="video-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+                </div>
+                <div class="the-video">
+                    <iframe class="v1" src="https://www.youtube.com/embed/b6FdqRrrMlQ?si=3zya67We-ebBp-VL"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="v2" src="https://www.youtube.com/embed/OJWbXkmmo-c?si=1gVL5LQ_Vk4GKQj0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="v3" src="https://www.youtube.com/embed/w3PchAjnjJo?si=RHo8ZmXKW_YBJFjC"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
             <div class="feature-container">
                 <h2 class="bottom">Featured Episodes</h2>
                 <div class="video-box">
                     <div class="box scale">
                         <div class="video-img">
                             <div><img src="./assets/video-one.webp" alt="two people doing conversations"></div>
-                            <a href="https://www.youtube.com/watch?v=b6FdqRrrMlQ" target="_blank"
-                                class="play-btn gradient btn-hover"><i class="fa-solid fa-play"></i></a>
+                            <label for="video-1"><a class="play-btn gradient btn-hover"><i
+                                        class="fa-solid fa-play"></i></a></label>
                         </div>
                         <div class="video-info">
                             <h3 class="opacity">The Future of AI in Everyday Life</h3>
-                            <p class="text opacity">Exploring how artificial intelligence is transforming our daily routines and
+                            <p class="text opacity">Exploring how artificial intelligence is transforming our daily
+                                routines and
                                 what to expect in the next decade.</p>
                             <div class="time">
                                 <div><img src="./assets/clock.png" alt="clock image"></div>
@@ -151,12 +186,13 @@
                     <div class="box scale">
                         <div class="video-img">
                             <div><img src="./assets/video-two.png" alt="two people doing conversations"></div>
-                            <a href="https://www.youtube.com/watch?v=OJWbXkmmo-c" target="_blank"
-                                class="play-btn gradient btn-hover"><i class="fa-solid fa-play"></i></a>
+                            <label for="video-2"><a class="play-btn gradient btn-hover"><i
+                                        class="fa-solid fa-play"></i></a></label>
                         </div>
                         <div class="video-info">
                             <h3 class="opacity">Building Better Habits for Remote Work</h3>
-                            <p class="text opacity">Practical strategies for staying productive and maintaining work-life
+                            <p class="text opacity">Practical strategies for staying productive and maintaining
+                                work-life
                                 balance in a remote environment.</p>
                             <div class="time">
                                 <div><img src="./assets/clock.png" alt="clock image"></div>
@@ -167,12 +203,13 @@
                     <div class="box scale">
                         <div class="video-img">
                             <div><img src="./assets/video-three.jpg" alt="two people doing conversations"></div>
-                            <a href="https://www.youtube.com/watch?v=w3PchAjnjJo" target="_blank"
-                                class="play-btn gradient btn-hover"><i class="fa-solid fa-play"></i></a>
+                            <label for="video-3"><a class="play-btn gradient btn-hover"><i
+                                        class="fa-solid fa-play"></i></a></label>
                         </div>
                         <div class="video-info">
                             <h3 class="opacity">Career Growth in Tech: A Roadmap</h3>
-                            <p class="text opacity">Expert advice on navigating your tech career from junior developer to senior
+                            <p class="text opacity">Expert advice on navigating your tech career from junior developer
+                                to senior
                                 leadership roles.</p>
                             <div class="time">
                                 <div><img src="./assets/clock.png" alt="clock image"></div>
@@ -199,8 +236,8 @@
                         <ul>
                             <li class="rotate"><a target="_blank" href="https://www.linkedin.com/in/jhankar/"><img
                                         src="./assets/linkedin.png" alt="linkedin logo"></a></li>
-                            <li class="rotate"><a target="_blank" href="https://x.com/jhankar_mahbub"><img src="./assets/x.png"
-                                        alt="twitter logo"></a></li>
+                            <li class="rotate"><a target="_blank" href="https://x.com/jhankar_mahbub"><img
+                                        src="./assets/x.png" alt="twitter logo"></a></li>
                             <li class="rotate"><a target="_blank" href="https://www.instagram.com/jhankarmahbub/"><img
                                         src="./assets/instagram.png" alt="instagram logo"></a></li>
                             <li class="rotate"><a target="_blank" href="https://www.youtube.com/@JhankarMahbub"><img
