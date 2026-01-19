@@ -308,7 +308,19 @@ nav button {
     aspect-ratio: 1;
     margin-bottom: 40px;
     min-width: 0;
+    transform: scale(5);
+    animation: starting 0.8s cubic-bezier(.34, 1.56, .64, 1) forwards;
+    animation-delay: 1s;
 }
+@keyframes starting {
+    from {
+        transform: scale(5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 
 .hero-content .mic-img::before {
     content: "NEW";
@@ -323,6 +335,17 @@ nav button {
     font-size: 1.1rem;
     font-weight: 600;
     z-index: 1;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: show 0.1s linear forwards;
+    animation-delay: 1.7s;
+}
+
+@keyframes show {
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 #hero-overlay-image {
@@ -345,7 +368,14 @@ nav button {
     background: inherit;
     animation: spin 8s linear infinite;
     border-radius: 50%;
-    border: 8px solid #412567;
+    border: 0px solid #412567;
+    animation: border 0.1s linear forwards;
+    animation-delay: 1.4s;
+}
+@keyframes border {
+    to{
+        border: 8px solid #412567;
+    }
 }
 
 @keyframes spin {
@@ -359,6 +389,16 @@ nav button {
     height: 50%;
     object-fit: contain;
     z-index: 1;
+    opacity: 0;
+    transform: scale(0);
+    animation: scaling 0.1s linear forwards;
+    animation-delay: 1.6s;
+}
+@keyframes scaling {
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .hero-content .hero-des {
