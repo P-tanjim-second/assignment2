@@ -10,12 +10,14 @@
 body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    overflow-x: hidden;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 html {
@@ -23,6 +25,14 @@ html {
     scrollbar-width: thin;
     scrollbar-color: #4a2877 var(--background-color-one);
     scroll-behavior: smooth;
+}
+
+section {
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .gradient {
@@ -83,6 +93,7 @@ html {
     font-size: 1rem;
     font-weight: 400;
     line-height: 30px;
+    opacity: 0.6;
     color: white;
 }
 
@@ -96,7 +107,11 @@ html {
     animation-timeline: view();
     animation-range: entry 10% cover 20%;
 }
-
+.bottom-text{
+    animation: bottomtextcome both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+}
 .left {
     animation: leftcome both;
     animation-timeline: view();
@@ -126,7 +141,16 @@ html {
     animation-timeline: view();
     animation-range: entry 10% cover 20%;
 }
-
+@keyframes bottomtextcome {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 0.6;
+        transform: translateY(0px);
+    }
+}
 @keyframes opacity {
     from {
         opacity: 0;
@@ -149,7 +173,7 @@ html {
 
 @keyframes scalecome {
     from {
-        transform: scale(0);
+        transform: scale(0.5);
     }
 
     to {
@@ -306,6 +330,17 @@ nav button {
     flex-direction: column;
 }
 
+header{
+    z-index: 1000;
+    position: relative;
+    display: block;
+}
+main{
+    z-index: 1;
+    display: block;
+}
+
+
 .hero-content .mic-img {
     display: flex;
     justify-content: center;
@@ -316,16 +351,13 @@ nav button {
     aspect-ratio: 1;
     margin-bottom: 40px;
     min-width: 0;
-    transform: scale(5);
+    transform: scale(15);
     animation: starting 0.8s cubic-bezier(.34, 1.56, .64, 1) forwards;
     animation-delay: 1s;
+    z-index: 9999;
 }
 
 @keyframes starting {
-    from {
-        transform: scale(5);
-    }
-
     to {
         transform: scale(1);
     }
@@ -348,7 +380,7 @@ nav button {
     opacity: 0;
     transform: translateY(10px);
     animation: show 0.1s linear forwards;
-    animation-delay: 1.7s;
+    animation-delay: 2s;
 }
 
 @keyframes show {
@@ -380,7 +412,7 @@ nav button {
     border-radius: 50%;
     border: 0px solid #412567;
     animation: border 0.1s linear forwards;
-    animation-delay: 1.4s;
+    animation-delay: 1.5s;
 }
 
 @keyframes border {
@@ -403,7 +435,7 @@ nav button {
     opacity: 0;
     transform: scale(0);
     animation: scaling 0.1s linear forwards;
-    animation-delay: 1.6s;
+    animation-delay: 1.8s;
 }
 
 @keyframes scaling {
@@ -500,6 +532,7 @@ nav button {
 }
 
 .about-content .about-detail {
+    padding: 0 20px;
     width: 100%;
     display: grid;
     gap: 5rem;
@@ -864,10 +897,11 @@ footer .footer-content {
     text-align: center;
 }
 
-.footer-content .logo {
+.footer-content h3 {
     font-size: 5rem;
     font-weight: 800;
     color: white;
+     margin-bottom:32px;
 }
 
 .footer-content ul {
@@ -890,13 +924,13 @@ footer .footer-content {
     gap: 8px;
 }
 
-@media screen and (min-width: 1100px) and (max-width: 1285px) {
+@media screen and (min-width: 992px) and (max-width: 1285px) {
     .hero-content {
         top: 55%;
     }
 
     .hero-content .mic-img {
-        max-width: 280px;
+        max-width: 220px;
         margin-bottom: 20px;
     }
 }
@@ -937,7 +971,7 @@ footer .footer-content {
 
     nav .mobile-nav {
         display: flex;
-        margin-right: -350px;
+        margin-right: -550px;
     }
 
     .hero {
@@ -958,11 +992,12 @@ footer .footer-content {
 
     .hero-content .mic-img {
         max-width: 180px;
+        transform: scale(25);
     }
 
     .text {
         font-size: 0.85rem;
-        line-height: 18px;
+        line-height: 1.4;
     }
 
     .about-content .about-detail {
@@ -983,16 +1018,19 @@ footer .footer-content {
 
     .about-content h2 {
         font-size: 2rem;
+        margin: 0;
     }
 
     .about-content>p {
         width: 90%;
+        margin: 0.5rem 0 0 0;
     }
 
     .about,
     .feature,
     .choosing-tw {
         padding: 40px 0;
+        margin: 0;
     }
 
     .tw-container h3 {
@@ -1082,7 +1120,8 @@ footer .footer-content {
         width: 80%;
     }
 
-    .footer-content .logo {
+    .footer-content h3 {
+        margin-bottom: 24px;
         font-size: 3rem;
     }
 
