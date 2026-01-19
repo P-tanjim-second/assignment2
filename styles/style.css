@@ -8,6 +8,7 @@
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
+  overflow-x: hidden;
 }
 html{
     font-size: 16px;
@@ -83,6 +84,48 @@ nav{
     justify-content: space-around;
     border-bottom: 1px solid #412567;
 }
+
+/* mobile navbar styling */
+nav .hamburger-box{
+    display: none;
+    z-index: 0;
+    position: relative;
+}
+#hamburger{
+    appearance: none;
+    position: absolute;
+    z-index: 1;
+    background: transparent;
+    height: 30px;
+    width: 30px;
+}
+nav:has(#hamburger:checked) .mobile-nav{
+    display: flex;
+    margin-right: 0px;
+}
+nav .mobile-nav{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80vw;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    flex-direction: column;
+    padding: 40px 20px;
+    margin-left: 50px;
+    transition: margin-right 0.2s ease;
+}
+nav .mobile-nav div i{
+    color: white;
+}
+nav .mobile-nav a{
+    padding: 20px 0;
+    border-bottom: 1px solid #533C72;
+    color: white;
+    text-decoration: none;
+}
+/* large device navbar */
 nav .logo{
     font-size: 2rem;
     font-weight: 800;
@@ -118,6 +161,7 @@ nav button{
     vertical-align: middle;
 }
 .hero-content{
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -534,4 +578,16 @@ footer .footer-content{
     justify-content: center;
     align-items: center;
     gap: 8px;
+}
+
+@media screen and (max-width: 576px) {
+    nav ul, nav .btn-hover{
+        display: none;
+    }
+    nav .hamburger-box{
+        display: flex;
+    }
+    nav .mobile-nav{
+        margin-right: -350px;
+    }
 }
